@@ -89,3 +89,4 @@ function initByRole(role: number) {
       // do something else
   }
 }
+

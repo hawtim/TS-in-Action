@@ -1,3 +1,39 @@
+// 接口定义函数
+
+// let add: (x: number, y: number) => number
+
+// interface Add {
+//   {x: number, y: number}: number
+// }
+
+type Add = (x: number, y: number) => number
+
+let add: Add = (a, b) => a + b
+
+// 混合类型接口
+interface Lib {
+  (): void
+  version: string
+  doSomething(): void
+}
+
+
+function getLib() {
+  let lib: Lib = (() => {}) as Lib // 类型断言
+  lib.version = '1.0'
+  lib.doSomething = () => {}
+  return lib
+}
+
+let lib1 = getLib()
+lib1()
+lib1.doSomething()
+
+let lib2 = getLib()
+lib2()
+lib2.doSomething()
+
+
 function add5(x: number, y?: number) { // 可选参数必须位于必选参数之后
   return y ? x + y : x
 }

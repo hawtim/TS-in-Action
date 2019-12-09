@@ -1,6 +1,11 @@
-// 类的实现
-// class Dog {
+
+// abstract class Animal {
+
+// }
+// // 类的实现
+// class Dog extends Animal {
 //   constructor(name: string) {
+//     super()
 //     this.name = name
 //   }
 //   public name: string
